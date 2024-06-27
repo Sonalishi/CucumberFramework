@@ -1,9 +1,7 @@
 package StepDefinations;
 
 
-
 import java.time.Duration;
-import java.util.Random;
 
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
@@ -27,22 +25,21 @@ public class RegistrationStepdefination {
 	{
 		driver=new ChromeDriver();
         driver.manage().window().maximize();
-	}
+   	}
 
-	/*@After
+	@After
 	public void teardown()
 	{
 		if(driver!=null)
 		{
 			driver.quit();
 		}
-	}*/
+	}
 
 	@Given("I on registration page")
-	public void i_on_registration_page() {
+	public void i_on_registration_page() throws InterruptedException {
 	   driver.get("https://demo.nopcommerce.com/register?returnUrl=%2F");
 	   registrationpage = new RegistrationPage(driver);
-	 
 	}
 	
 	@Given("^I have entered valid (.*) , (.*) , (.*) , (.*) , (.*) , (.*)$")

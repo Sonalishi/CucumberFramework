@@ -4,7 +4,7 @@ Feature: Registration Functionality for nopCommerce site
   Also want to create my login Id and password 
   So that I can shop the goods.
 
-  Background: Successful login to registration page
+  Background: 
    Given I on registration page
    
   Scenario Outline: Successful registration with valid credentials
@@ -14,3 +14,6 @@ Feature: Registration Functionality for nopCommerce site
     Examples: 
       | Gender | FirstName | LastNme | Email               | Password | ConfirmPassword|
       |Male    | Steve     | Jobs    | stevejobs@gmail.com | steveJ123| steveJ123      |
+      |Female  | Alice     | Peery   | aliceP@gamil.com    |aliceP1906|aliceP1906      |
+
+      
