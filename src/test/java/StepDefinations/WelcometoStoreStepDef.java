@@ -1,5 +1,7 @@
 package StepDefinations;
 
+
+
 import java.time.Duration;
 
 import org.junit.Assert;
@@ -9,8 +11,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.*;
-import pages.RegistrationPage;
 import pages.WelcomeStorePage;
+
 
 public class WelcometoStoreStepDef {
 

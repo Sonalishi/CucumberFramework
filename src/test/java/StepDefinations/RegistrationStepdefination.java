@@ -1,11 +1,11 @@
 package StepDefinations;
 
-
 import java.time.Duration;
 
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -13,6 +13,8 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pages.RegistrationPage;
+
+
 
 
 public class RegistrationStepdefination {

@@ -15,5 +15,3 @@ Feature: Registration Functionality for nopCommerce site
       | Gender | FirstName | LastNme | Email               | Password | ConfirmPassword|
       |Male    | Steve     | Jobs    | stevejobs@gmail.com | steveJ123| steveJ123      |
       |Female  | Alice     | Peery   | aliceP@gamil.com    |aliceP1906|aliceP1906      |
-
-      
