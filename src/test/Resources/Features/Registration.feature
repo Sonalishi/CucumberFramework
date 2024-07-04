@@ -4,7 +4,7 @@ Feature: Registration Functionality for nopCommerce site
   Also want to create my login Id and password 
   So that I can shop the goods.
 
-  Background: 
+  Background: on Page
    Given I on registration page
    
   Scenario Outline: Successful registration with valid credentials

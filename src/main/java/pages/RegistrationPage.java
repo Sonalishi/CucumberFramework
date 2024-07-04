@@ -26,6 +26,7 @@ public class RegistrationPage extends CommonUtility{
 		this.driver=driver;
 	}
 
+	
 	public void enterGender(String gender)
 	{
 		if(gender.equalsIgnoreCase("female"))

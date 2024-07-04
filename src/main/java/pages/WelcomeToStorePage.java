@@ -5,11 +5,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
+public class WelcomeToStorePage {
 
-public class WelcomeStorePage {
-
-	private WebDriver driver;
-
+	WebDriver driver;
+	
+	
 	//By Locators
 	private By computerLocator = By.xpath("//*[@class='top-menu notmobile']//descendant::a[1]");
 	private By desktopLocator = By.xpath("//*[@class='top-menu notmobile']//descendant::a[2]");
@@ -25,26 +25,14 @@ public class WelcomeStorePage {
 	private By searchButtonLocator =By.xpath("//*[@class='button-1 search-box-button']");
 	private By searchResultLocator =By.xpath("//*[@class='product-title']//child::a");
 	
-	WebElement desktop;
-	WebElement notebook;
-	WebElement software;
-	WebElement camera_photo;
-	WebElement cellphones;
-	WebElement others;
+	
 	
 
-	//parametrise constructor
-	public WelcomeStorePage(WebDriver driver)
-	{
-		this.driver=driver;
-		desktop=driver.findElement(desktopLocator);
-		notebook=driver.findElement(notebookLocator);
-		software=driver.findElement(softwareLocator);
-		camera_photo=driver.findElement(camera_photoLocator);
-		cellphones=driver.findElement(cellphonesLocator);
-		others=driver.findElement(otherLocator);
+	public WelcomeToStorePage(WebDriver driver) {
+		this.driver=driver;	
 	}
-
+	
+	
 	public void moveToComputer()
 	{
 		WebElement computer=driver.findElement(computerLocator);
@@ -65,7 +53,7 @@ public class WelcomeStorePage {
 	
 	public boolean isDesktopVisible()
 	{
-		
+		WebElement desktop=driver.findElement(desktopLocator);
 		return desktop.isDisplayed();
 		
 	}
@@ -73,21 +61,21 @@ public class WelcomeStorePage {
 
 	public boolean isNotebookVisible()
 	{
-		
+		WebElement  notebook=driver.findElement(notebookLocator);
 		return notebook.isDisplayed();
 		
 	}
 	
 	public boolean isSoftwareVisible()
 	{
-		
+	 WebElement	software=driver.findElement(softwareLocator);
 		return software.isDisplayed();
 		
 	}
 	
 	public boolean isCamera_photoVisible()
 	{
-		
+		WebElement camera_photo=driver.findElement(camera_photoLocator);
 		return camera_photo.isDisplayed();
 		
 	}
@@ -95,45 +83,51 @@ public class WelcomeStorePage {
 
 	public boolean isCellphoneVisible()
 	{
-		
+	 WebElement	cellphones=driver.findElement(cellphonesLocator);
 		return cellphones.isDisplayed();
 		
 	}
 	
 	public boolean isOtherVisible()
 	{
-		
+	WebElement	others=driver.findElement(otherLocator);
 		return others.isDisplayed();
 		
 	}
 	
 	public void desktopClick()
 	{
+		WebElement desktop=driver.findElement(desktopLocator);
 		desktop.click();
 	}
 	
 	public void notebookClick()
 	{
+		WebElement  notebook=driver.findElement(notebookLocator);
 		notebook.click();
 	}
 	
 	public void softwareClick()
 	{
+		WebElement software=driver.findElement(softwareLocator);
 		software.click();
 	}
 	
 	public void camera_photoClick()
 	{
+		WebElement camera_photo=driver.findElement(camera_photoLocator);
 		camera_photo.click();
 	}
 	
 	public void cellPoneClick()
 	{
+		 WebElement	cellphones=driver.findElement(cellphonesLocator);
 		cellphones.click();
 	}
 	
 	public void otherClick()
 	{
+		WebElement	others=driver.findElement(otherLocator);
 		others.click();
 	}
 	
@@ -153,5 +147,6 @@ public class WelcomeStorePage {
 	{
 		WebElement result=driver.findElement(searchResultLocator);
 		return(result.isDisplayed());
-	}
+    }
+	
 }

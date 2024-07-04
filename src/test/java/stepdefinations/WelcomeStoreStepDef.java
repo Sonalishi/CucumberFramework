@@ -1,54 +1,29 @@
-package StepDefinations;
-
-
+package stepdefinations;
 
 import java.time.Duration;
 
-import org.junit.Assert;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 
-import io.cucumber.java.After;
-import io.cucumber.java.Before;
+import factory.DriverFactory;
 import io.cucumber.java.en.*;
-import pages.WelcomeStorePage;
+import pages.WelcomeToStorePage;
 
-
-public class WelcometoStoreStepDef {
-
-	private WebDriver driver;
-	private WelcomeStorePage store;
+public class WelcomeStoreStepDef {
 	
-	@Before
-	public void setup()
-	{
-		driver=new ChromeDriver();
-        driver.manage().window().maximize();
-        
-	}
-	
-	@After
-	public void teardown()
-	{
-		if(driver!=null)
-		{
-			driver.quit();
-		}
-	}
+	private WelcomeToStorePage store= new WelcomeToStorePage(DriverFactory.getDriver());
 	
 	@Given("I am on Welcome to Store page")
 	public void i_am_on_welcome_to_store_page() {
-		 driver.get("https://demo.nopcommerce.com/");
-		 store = new WelcomeStorePage(driver);
+	 DriverFactory.getDriver().get("https://demo.nopcommerce.com/");
 	}
-
 	
 	@Given("^I see visible options under (.*) option$")
 	public void i_see_visible_options_option(String mainoption) throws InterruptedException {
+		
 		 if(mainoption.equals("Computers"))
 		 {
 		  store.moveToComputer();
-		  Thread.sleep(1000);
+		  DriverFactory.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(1000));
 		  Assert.assertTrue(store.isDesktopVisible());
 		  Assert.assertTrue(store.isNotebookVisible());
 		  Assert.assertTrue(store.isSoftwareVisible());
@@ -101,7 +76,7 @@ public class WelcometoStoreStepDef {
 	@Then("^I should go on (.*) page$")
 	public void i_should_go_on_option_page(String listoption) throws InterruptedException {
 		Thread.sleep(1000);
-		String url=driver.getCurrentUrl();
+		String url=DriverFactory.getDriver().getCurrentUrl();
 		if(listoption.equals("Desktops"))
 	    {
 			Assert.assertEquals(url, "https://demo.nopcommerce.com/desktops");
@@ -112,7 +87,7 @@ public class WelcometoStoreStepDef {
 			Assert.assertEquals(url, "https://demo.nopcommerce.com/notebooks");
 		 }
 		else
-		if(listoption.equals("software"))
+		if(listoption.equals("Software"))
 	    {
 			Assert.assertEquals(url, "https://demo.nopcommerce.com/software");
 		}
@@ -132,6 +107,7 @@ public class WelcometoStoreStepDef {
 				Assert.assertEquals(url, "https://demo.nopcommerce.com/others");
 			}
 	}
+
 	
 	@Given("I entered product in search bar and click on search button")
 	public void i_entered_product_in_search_bar() {
@@ -139,12 +115,12 @@ public class WelcometoStoreStepDef {
 	    store.searchClick();
 	}
 
-	@Then("Product shoud display on page")
+	@Then("Product should display on page")
 	public void product_shoud_display_on_page() {
 		
 		Assert.assertTrue(store.searchResult());
 		
 	}
 
-	
+
 }
