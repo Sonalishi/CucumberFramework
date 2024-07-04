@@ -30,10 +30,10 @@ public class Hooks {
 		dfactory = new DriverFactory();
 		driver=dfactory.init_browser(browserName);
 	}
-	/*
+	
 	@After(order=0)
 	public void quitBrowser()
 	{
 		driver.quit();
-	}*/
+	}
 }

@@ -11,6 +11,9 @@ public class LoginPage {
 	private By emailIdLocator = By.xpath("//input[@class='email']");
 	private By passwordLocator = By.xpath("//input[@class='password']");
 	private By logInbuttonLocator = By.xpath("//div[@class='returning-wrapper fieldset']//descendant::button");
+	private By registrationbuttonLocator = By.xpath("//div[@class='new-wrapper register-block']//descendant::button");
+	private By loginerrorLocator = By.xpath("//div[@class='message-error validation-summary-errors']");
+	//Login was unsuccessful. Please correct the errors and try again.
 	
 	public LoginPage(WebDriver driver)
 	{
@@ -39,5 +42,19 @@ public class LoginPage {
 		WebElement loginbutton=driver.findElement(logInbuttonLocator);
 		loginbutton.click();
 		System.out.println("Button");
+	}
+	
+	public boolean isErrorDisplay()
+	{
+		WebElement errormessage=driver.findElement(loginerrorLocator);
+		System.out.println(errormessage.isDisplayed());
+		return errormessage.isDisplayed();
+		
+	}
+	
+	public void registrationClick()
+	{
+		WebElement registerbutton=driver.findElement(registrationbuttonLocator);
+		registerbutton.click();
 	}
 }
