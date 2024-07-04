@@ -1,4 +1,4 @@
-package runner;
+package Runner;
 
 import org.testng.annotations.DataProvider;
 
@@ -6,7 +6,7 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(features="src/test/Resources/Features/Login.feature",
-                  glue= {"StepDefinations", "appHooks"},
+                  glue= {"stepdefinations", "appHooks"},
                   plugin = { "pretty", "html:target/cucumber-reports.html","json:target/cucumber.json" },
                   monochrome = true)
 public class TestRunner extends AbstractTestNGCucumberTests{
