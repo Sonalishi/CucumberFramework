@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>8/2/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>8/3/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Jul 04 18:07:18 CEST 2024</td>
+<td>Started on:</td><td>Sun Jul 07 19:33:56 CEST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>18 seconds (18407 ms)</td>
+<tr><td>Total time:</td><td>23 seconds (23316 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,67 +76,12 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login with correct credentials", "Login Functionality for nopCommerce site"</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;message-error validation-summary-errors&apos;]&quot;}
-  (Session info: chrome=126.0.6478.62)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [43997a3479093924dfb829f90df32c60, findElement {using=xpath, value=//div[@class=&apos;message-error validation-summary-errors&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.62, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: C:\Users\shind\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61852}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61852/devtoo..., se:cdpVersion: 126.0.6478.62, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 43997a3479093924dfb829f90df32c60
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at pages.LoginPage.isErrorDisplay(LoginPage.java:49)
-	at stepdefinations.LoginStepDefination.user_click_on_login_butten(LoginStepDefination.java:37)
-	at ✽.User click on Login butten(file:///D:/Selenium/Framework/CucumberTestNGFramework/src/test/Resources/Features/Login.feature:12)
-... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2095118384", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2095118384'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;message-error validation-summary-errors&apos;]&quot;}
-  (Session info: chrome=126.0.6478.62)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [43997a3479093924dfb829f90df32c60, findElement {using=xpath, value=//div[@class=&apos;message-error validation-summary-errors&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.62, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: C:\Users\shind\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61852}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61852/devtoo..., se:cdpVersion: 126.0.6478.62, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 43997a3479093924dfb829f90df32c60
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at pages.LoginPage.isErrorDisplay(LoginPage.java:49)
-	at stepdefinations.LoginStepDefination.user_click_on_login_butten(LoginStepDefination.java:37)
-	at ✽.User click on Login butten(file:///D:/Selenium/Framework/CucumberTestNGFramework/src/test/Resources/Features/Login.feature:12)
-</pre></div></td>
-<td>8</td>
-<td>Runner.TestRunner@1807e3f6</td></tr>
-<tr>
 <td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Navigating to different options pages", "Welcome to Store Functionality"</td>
 <td><div><pre>java.lang.AssertionError: expected [true] but found [false]
 	at stepdefinations.WelcomeStoreStepDef.i_see_visible_options_option(WelcomeStoreStepDef.java:36)
 	at ✽.I see visible options under Electronics option(file:///D:/Selenium/Framework/CucumberTestNGFramework/src/test/Resources/Features/WelcomeToStore.feature:14)
-... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace726633472", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace726633472'><pre>java.lang.AssertionError: expected [true] but found [false]
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace596457117", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace596457117'><pre>java.lang.AssertionError: expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
 	at org.testng.Assert.assertTrue(Assert.java:57)
@@ -145,6 +90,38 @@ Session ID: 43997a3479093924dfb829f90df32c60
 	at ✽.I see visible options under Electronics option(file:///D:/Selenium/Framework/CucumberTestNGFramework/src/test/Resources/Features/WelcomeToStore.feature:14)
 </pre></div></td>
 <td>4</td>
+<td>Runner.TestRunner@1807e3f6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login with correct credentials", "Login Functionality for nopCommerce site"</td>
+<td><div><pre>org.junit.ComparisonFailure: expected:&lt;...emo.nopcommerce.com/[login?returnurl=%2F]&gt; but was:&lt;...emo.nopcommerce.com/[desktops]&gt;
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at stepdefinations.LoginStepDefination.user_should_successfully_login_to_store(LoginStepDefination.java:65)
+	at ✽.User should successfully login to store(file:///D:/Selenium/Framework/CucumberTestNGFramework/src/test/Resources/Features/Login.feature:13)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1280691948", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1280691948'><pre>org.junit.ComparisonFailure: expected:&lt;...emo.nopcommerce.com/[login?returnurl=%2F]&gt; but was:&lt;...emo.nopcommerce.com/[desktops]&gt;
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at stepdefinations.LoginStepDefination.user_should_successfully_login_to_store(LoginStepDefination.java:65)
+	at ✽.User should successfully login to store(file:///D:/Selenium/Framework/CucumberTestNGFramework/src/test/Resources/Features/Login.feature:13)
+</pre></div></td>
+<td>15</td>
+<td>Runner.TestRunner@1807e3f6</td></tr>
+<tr>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Navigating to different options pages", "Welcome to Store Functionality"</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at stepdefinations.WelcomeStoreStepDef.i_see_visible_options_option(WelcomeStoreStepDef.java:36)
+	at ✽.I see visible options under Electronics option(file:///D:/Selenium/Framework/CucumberTestNGFramework/src/test/Resources/Features/WelcomeToStore.feature:14)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace328663757", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace328663757'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at org.testng.Assert.assertTrue(Assert.java:67)
+	at stepdefinations.WelcomeStoreStepDef.i_see_visible_options_option(WelcomeStoreStepDef.java:36)
+	at ✽.I see visible options under Electronics option(file:///D:/Selenium/Framework/CucumberTestNGFramework/src/test/Resources/Features/WelcomeToStore.feature:14)
+</pre></div></td>
+<td>6</td>
 <td>Runner.TestRunner@1807e3f6</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
@@ -156,24 +133,24 @@ Session ID: 43997a3479093924dfb829f90df32c60
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Navigating to different options pages", "Welcome to Store Functionality"</td>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Successful registration with valid credentials", "Registration Functionality for nopCommerce site"</td>
 <td></td>
-<td>5</td>
+<td>11</td>
 <td>Runner.TestRunner@1807e3f6</td></tr>
 <tr>
 <td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Navigating to different options pages", "Welcome to Store Functionality"</td>
 <td></td>
-<td>5</td>
+<td>6</td>
 <td>Runner.TestRunner@1807e3f6</td></tr>
 <tr>
 <td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Positive test for search functionality", "Welcome to Store Functionality"</td>
 <td></td>
-<td>8</td>
+<td>9</td>
 <td>Runner.TestRunner@1807e3f6</td></tr>
 <tr>
-<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Navigating to different options pages", "Welcome to Store Functionality"</td>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Add to Cart", "Desktop Functionality for nopCommerce site"</td>
 <td></td>
-<td>4</td>
+<td>9</td>
 <td>Runner.TestRunner@1807e3f6</td></tr>
 <tr>
 <td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Navigating to different options pages", "Welcome to Store Functionality"</td>
@@ -188,12 +165,12 @@ Session ID: 43997a3479093924dfb829f90df32c60
 <tr>
 <td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Navigating to different options pages", "Welcome to Store Functionality"</td>
 <td></td>
-<td>9</td>
+<td>6</td>
 <td>Runner.TestRunner@1807e3f6</td></tr>
 <tr>
-<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Successful registration with valid credentials", "Registration Functionality for nopCommerce site"</td>
+<td title='Runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Navigating to different options pages", "Welcome to Store Functionality"</td>
 <td></td>
-<td>11</td>
+<td>6</td>
 <td>Runner.TestRunner@1807e3f6</td></tr>
 </table><p>
 </body>

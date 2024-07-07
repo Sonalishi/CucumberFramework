@@ -2,6 +2,12 @@ package utilities;
 
 import java.util.Random;
 
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+
+import factory.DriverFactory;
+import io.cucumber.java.Scenario;
+
 public class CommonUtility {
 
 	public String generateString() 
@@ -15,4 +21,12 @@ public class CommonUtility {
 		      }
 		      return generatedString.toString();
 	}
+	
+    public void takescreenshot(Scenario scenario)
+    {
+    	String screenshotName= scenario.getName().replaceAll(" ", "_");
+		byte[] sourcepath = ((TakesScreenshot)DriverFactory.getDriver()).getScreenshotAs(OutputType.BYTES);
+		
+		scenario.attach(sourcepath, "image/png", screenshotName);
+    }
 }

@@ -18,6 +18,8 @@ public class RegistrationPage extends CommonUtility{
 	private By passwordLocator = By.xpath("//input[@name='Password']");
 	private By confirmPasswordLocator = By.xpath("//input[@name='ConfirmPassword']");
 	private By registerbuttonLocator = By.name("register-button");
+	
+	private By logoutLocator=By.className("ico-logout");
 
 
 	//parametrise constructor
@@ -76,6 +78,12 @@ public class RegistrationPage extends CommonUtility{
 	{
 		WebElement registerButton = driver.findElement(registerbuttonLocator);
 		registerButton.click();
+	}
+	
+	public void clicklogoutLink()
+	{
+		WebElement logout = driver.findElement(logoutLocator);
+		logout.click();
 	}
 
 }

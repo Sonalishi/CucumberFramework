@@ -2,11 +2,15 @@ package appHooks;
 
 import java.util.Properties;
 
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
 import factory.DriverFactory;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
+import io.cucumber.java.Scenario;
+import utilities.CommonUtility;
 import utilities.ConfigReader;
 
 public class Hooks {
@@ -35,5 +39,15 @@ public class Hooks {
 	public void quitBrowser()
 	{
 		driver.quit();
+	}
+	
+	@After(order=1)
+	public void teardown(Scenario scenario)
+	{
+		if(scenario.isFailed())
+		{
+			CommonUtility util=new CommonUtility();
+			util.takescreenshot(scenario);
+		}
 	}
 }

@@ -25,6 +25,8 @@ public class WelcomeToStorePage {
 	private By searchButtonLocator =By.xpath("//*[@class='button-1 search-box-button']");
 	private By searchResultLocator =By.xpath("//*[@class='product-title']//child::a");
 	
+	private By loginLocator= By.className("ico-login");
+	
 	
 	
 
@@ -148,5 +150,11 @@ public class WelcomeToStorePage {
 		WebElement result=driver.findElement(searchResultLocator);
 		return(result.isDisplayed());
     }
+	
+	public void clickLogin()
+	{
+		WebElement login = driver.findElement(loginLocator);
+		login.click();
+	}
 	
 }

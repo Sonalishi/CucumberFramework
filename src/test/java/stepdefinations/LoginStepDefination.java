@@ -7,6 +7,7 @@ import factory.DriverFactory;
 import io.cucumber.java.en.*;
 import pages.LoginPage;
 import pages.RegistrationPage;
+import pages.WelcomeToStorePage;
 
 
 public class LoginStepDefination {
@@ -14,7 +15,7 @@ public class LoginStepDefination {
 	
 	private LoginPage login=new LoginPage(DriverFactory.getDriver());
 	private RegistrationPage registration =new RegistrationPage(DriverFactory.getDriver());
-	
+	private WelcomeToStorePage welcomestore=new WelcomeToStorePage(DriverFactory.getDriver());
 	
 	@Given("I am on Login page")
 	public void i_on_Login_page() throws InterruptedException {
@@ -45,8 +46,10 @@ public class LoginStepDefination {
 	    	registration.enterPassword("steveJ123");
 	    	registration.enterConfirmPassword("steveJ123");
 	    	registration.clickRegisterButton();
+	    	registration.clicklogoutLink();
+	    	welcomestore.clickLogin();
 	    	LoginStepDefination sp= new LoginStepDefination();
-	    	sp.i_on_Login_page();
+	        sp.i_on_Login_page();
 	    	sp.user_enters_email("stevejobs@gmail.com");
 	    	sp.user_enters_password("steveJ123");
 	    	login.loginClick();
