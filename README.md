@@ -1,7 +1,8 @@
 # CucumberFramework
 
-CucumberFramework is test automation framework based on cucumber, TestNG and different other concepts, covering Parallel execution,Cross Browser testing, functional testing & unit testing. 
-For this project we have used "https://demo.nopcommerce.com/" application. nopCommerce is ecommerce online store to perchase various goods like Computers, Electonics and Apparel.
+CucumberFramework is test automation framework based on cucumber, TestNG and different other concepts.
+This project covers Parallel execution, Cross Browser testing, functional testing & unit testing. 
+For this project we have used " https://demo.nopcommerce.com/" application. 'nopCommerce' is ecommerce online store to purchase various goods like Computers, Electronics and Apparel.
 
 Created with lessons learned from a large number of development projects to provide all commonly required components and concepts.
 
